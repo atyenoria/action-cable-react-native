@@ -33,7 +33,7 @@ ConnectionMonitor.prototype.start = function () {
     this.startedAt = now();
     delete this.stoppedAt;
     this.startPolling();
-    document.addEventListener("visibilitychange", this.visibilityDidChange);
+    // document.addEventListener("visibilitychange", this.visibilityDidChange);
     return Logger.log(["ConnectionMonitor started. pollInterval = " + (this.getPollInterval()) + " ms"]);
   }
 }
@@ -42,7 +42,7 @@ ConnectionMonitor.prototype.stop = function () {
   if (this.isRunning()) {
     this.stoppedAt = now();
     this.stopPolling();
-    document.removeEventListener("visibilitychange", this.visibilityDidChange);
+    // document.removeEventListener("visibilitychange", this.visibilityDidChange);
     return Logger.log("ConnectionMonitor stopped");
   }
 }

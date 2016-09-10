@@ -89,7 +89,8 @@ Connection.prototype.isActive = function () {
 
 Connection.prototype.isProtocolSupported = function () {
   var ref;
-  return ref = this.getProtocol(), indexOf.call(supportedProtocols, ref) >= 0;
+  // return ref = this.getProtocol(), indexOf.call(supportedProtocols, ref) >= 0;
+  return true
 }
 
 Connection.prototype.isState = function (states) {
@@ -124,8 +125,7 @@ Connection.prototype.uninstallEventHandlers = function () {
   }
 }
 
-Connection.prototype.events = function () {
-  return {
+Connection.prototype.events = {
     message: function(event) {
       var identifier, message, ref, type;
       if (!this.isProtocolSupported()) {
@@ -170,7 +170,6 @@ Connection.prototype.events = function () {
     error: function() {
       return log("WebSocket onerror event");
     }
-  }
 }
 
 module.exports = Connection

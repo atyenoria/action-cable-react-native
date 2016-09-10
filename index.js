@@ -13,11 +13,12 @@ ActionCable.prototype.createConsumer = function (url) {
   if (url == null) {
     url = defaultURL != null ? defaultURL : this.internal.default_mount_path
   }
-  return new Consumer(this.createWebSocketURL(url))
+  return new Consumer(this.createWebSocketURL("ws://localhost:4000/cable"))
 }
 
 ActionCable.prototype.getConfig = function (name) {
-  var element = document.head.querySelector("meta[name='action-cable-" + name + "']")
+  // var element = document.head.querySelector("meta[name='action-cable-" + name + "']")
+  var element = null
 
   return element != null ? element.getAttribute("content") : void 0
 }
