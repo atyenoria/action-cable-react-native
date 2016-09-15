@@ -1,6 +1,6 @@
 {
   "name": "action-cable-react-native",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Action Cable for react native",
   "main": "index.js",
   "scripts": {
@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tomchinery/action-cable-react-native.git"
+    "url": "git+https://github.com/atyenoria/action-cable-react-native.git"
   },
   "keywords": [
     "action",
     "cable",
     "node",
-    "websockets"
+    "react-native"
   ],
-  "author": "akinori nakajima <hello@tomchinery.com> (https://github.com/atyenoria/action-cable-react-native)",
+  "author": "akinori nakajima <eigotyoubunn30@gmail.com> (https://github.com/atyenoria/action-cable-react-native)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/atyenoria/action-cable-react-native/issues"
