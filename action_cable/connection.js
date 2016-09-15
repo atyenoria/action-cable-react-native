@@ -168,7 +168,7 @@ Connection.prototype.events = {
       });
     },
     error: function() {
-      return log("WebSocket onerror event");
+      return console.log("WebSocket onerror event");
     }
 }
 
